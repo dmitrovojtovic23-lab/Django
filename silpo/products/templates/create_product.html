@@ -10,7 +10,6 @@
     <form method="post" enctype="multipart/form-data" class="space-y-4">
       {% csrf_token %}
       <div>
-        {{ form.category.label_tag }}
         {{ form.category }}
         {% if form.category.errors %}
           <p class="text-rose-400 text-sm">{{ form.category.errors }}</p>
