@@ -66,7 +66,15 @@
                 <span class="text-lg font-bold text-emerald-400">{{ product.price }} ₴</span>
               </div>
 
-              <div class="mt-4 grid grid-cols-2 gap-3">
+              <div class="mt-4 grid grid-cols-3 gap-3">
+                <a class="inline-flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition"
+                   href="{% url 'products:product_detail' product.pk %}">
+                  Переглянути
+                </a>
+                <a class="inline-flex items-center justify-center rounded-lg bg-emerald-600 hover:bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition"
+                   href="{% url 'products:create_product' %}">
+                  Редагувати
+                </a>
                 <form action=""
                       method="POST"
                       class="inline-block"
@@ -77,10 +85,6 @@
                     Видалити
                   </button>
                 </form>
-                 <a class="inline-flex items-center justify-center rounded-lg bg-emerald-600 hover:bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition"
-                   href="{% url 'products:create_product' %}">
-                  Редагувати
-                </a>
               </div>
 
             </div>
